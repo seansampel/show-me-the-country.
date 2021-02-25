@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import InputField from "./components/input-field";
+// import "./styles/App.css";
+import CountryCard from "./components/country-card";
 
 function App() {
   return (
-    <div>
-      <header className="App-header"/>
-      <h2>Show me the country</h2>
-   
+    <div className="wrap">
+      <InputField />
+      <CountryCard />   
     </div>
     )
 };
