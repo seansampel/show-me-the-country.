@@ -5,14 +5,14 @@ const CountryCard = props => {
   if(!props.country) {
     return null;
   }
-const { country: { name, capital, population } } = props;
+const { country: { name, capital, population, alpha2Code } } = props;
 
 
 return (
   <div className="card-list">
     <div className="card">
       <img
-        src="https://i.redd.it/3y0ffehlprc11.png"
+        src={`https://www.countryflags.io/${alpha2Code}/flat/64.png`}
         alt="flag"
         style={{ width: "100%" }}
       />
