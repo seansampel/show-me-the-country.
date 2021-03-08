@@ -1,22 +1,33 @@
 import React from "react";
 import "../styles/CountryCard.css";
 
-const CountryCard = props => (
+const CountryCard = props => {
+  if(!props.country) {
+    return null;
+  }
+const { country: { name, capital, population } } = props;
+
+
+return (
   <div className="card-list">
     <div className="card">
-      <img 
-          src="https://i.redd.it/3y0ffehlprc11.png"
-          alt="flag"
-          style={{ width: "100%" }}     
+      <img
+        src="https://i.redd.it/3y0ffehlprc11.png"
+        alt="flag"
+        style={{ width: "100%" }}
       />
       <div className="card-details">
         <h4>
-          <b>I am a country</b>
+          <b> {name}</b>
         </h4>
-        <p>These are some details about me</p>
+          <ul>
+            <li>Capital: {capital}</li>
+            <li>Population: {population}</li>
+          </ul>
       </div>
     </div>
   </div>
 );
+}
 
 export default CountryCard;
